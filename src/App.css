@@ -1,0 +1,299 @@
+body {
+  background-color: #faebeb;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  padding: unset;
+  border: unset;
+  background: unset;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+nav {
+  position: fixed;
+  display: grid;
+  top: 0;
+  background-color: #fff;
+  height: 3.3em;
+  line-height: 3.3em;
+  width: 100%;
+  border-bottom: 0.1em solid #dbdbdb;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo > img {
+  vertical-align: middle;
+  width: 10em;
+}
+
+.search {
+  background: #fafafa;
+  height: 2em;
+  margin: 0.8em;
+  width: 15.5em;
+  border: 0.07em solid #dbdbdb;
+  border-radius: 0.2em;
+}
+
+.search::placeholder {
+  text-align: center;
+  color: #808080;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* width: 0.5em;
+  justify-content: space-evenly; */
+}
+
+.nav-links i {
+  transform: scale(1.6);
+  color: #252525;
+}
+
+.container {
+  padding: 0 15%;
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3em 0 2em 5em;
+  border-bottom: 0.2px solid #dbdbdb;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+#profilePhotoInput {
+  display: none;
+}
+
+.profile-photo {
+  background: #000;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin-top: 0.5em;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-photo img:hover {
+  opacity: 0.6;
+}
+
+.profile-info .name {
+  font-size: 1.7em;
+  /* margin-top: -0.2em; */
+  color: #545454;
+  margin-bottom: 0;
+}
+
+.profile-info .about {
+  font-size: 1.2em;
+  color: #545454;
+}
+
+.profile-info button {
+  background-color: #cc2ab6;
+  color: #fff;
+  font-size: 1.1em;
+  width: 6em;
+  height: 2em;
+}
+
+.profile-info button:hover {
+  background-color: #e271bc;
+}
+
+.edit-bio-form input {
+  width: 50%;
+  height: 2em;
+  border: 0.1em solid #dbdbdb;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  position: relative;
+  left: 3rem;
+}
+
+.edit-bio-form button {
+  margin: 1em 1em 0 0;
+}
+
+.edit-bio-form .cancel-button {
+  background-color: #db7629;
+  align-items: center;
+  position: relative;
+  right: -3rem; 
+  margin-right: 1.5rem;
+}
+.edit-bio-form .save{
+  align-items: center;
+  position: relative;
+  left: 1rem;
+  margin-left: 2rem;
+}
+#addPhotoInput {
+  display: none;
+}
+
+.edit-bio-form{
+  align-items: center;
+  position: relative;
+  left: 1rem;
+  margin-left: -4rem;
+}
+.add-photo-button {
+  transform: scale(3);
+  position: fixed;
+  bottom: 5em;
+  right: 7em;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.7em;
+  column-gap: 1em;
+}
+
+.item {
+  height: 17.5em;
+  width: 17.5em;
+  background: #000;
+  cursor: pointer;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.item:hover .item-image {
+  opacity: 0.7;
+}
+
+.delete-button {
+  opacity: 0;
+  position: absolute;
+  margin-left: -12em;
+  margin-top: 11em;
+  align-items: center;
+  padding: 0.2em 0.4em;
+  background-color: #ada3a3;
+  color: #fff;
+  border: 1px solid #c8c8c8;
+  transform: scale(1.5);
+}
+
+.delete-button:hover {
+  background-color: #cc2ab6;
+  color: #fff;
+}
+
+.item:hover .delete-button {
+  opacity: 1;
+}
+@media (max-width: 700px) {
+  body {
+     padding: 0px; 
+    margin: 0px;
+    align-items: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: grid;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .logo {
+    width: 3em;
+  }
+  .search {
+    width: 5.3em;
+    position: relative;
+    left: 4.5em;
+  }
+  .nav-links i {
+    display: flex;
+    flex-direction: grid;
+    justify-content: space-evenly;
+    width: 2em;
+    position: relative;
+    left: 2em;
+  }
+  .profile-photo {
+    width: 5em;
+    height: 5em;
+    margin-top: 3em;
+    margin-right: 2em;
+    
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 auto;
+    margin-top: -1em;
+    margin-left: -5em;
+  
+  }
+  #profilePhotoInput{
+    align-items: center;
+  }
+  .profile-info {
+    font-size: 1em;
+    text-align: center;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .add-photo-button {
+    position: fixed;
+    bottom: 5em;
+    left: 7em;
+    margin-left: 10rem;
+  }
+  .edit-bio-form .cancel-button{
+  align-items: center;
+  position: relative;
+  left: -1em; 
+  margin-left: 5.5rem;
+  }
+  .edit-bio-form .save{
+  align-items: center;
+  position: relative;
+  left: -1.3rem;
+  margin-left: 5.5rem;
+  }
+  .edit-bio-form input{
+  align-items: center;
+  position: relative;
+  right: -4.5rem;
+  margin-right:  3.8rem;
+}
+}
