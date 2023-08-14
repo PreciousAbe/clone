@@ -296,4 +296,14 @@ nav {
   right: -4.5rem;
   margin-right:  3.8rem;
 }
+.delete-button {
+  opacity: 0;
+  position: absolute;
+  margin-left: -12em;
+  margin-top: 11em;
+  align-items: center;
+  padding: 0.2em 0.4em;
+ 
+}
+
 }
